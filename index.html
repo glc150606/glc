@@ -610,20 +610,30 @@
 <script>
   // 네이버 지도 초기화
   window.addEventListener('load', function () {
-    var churchLocation = new naver.maps.LatLng(35.0757, 128.9213);
     var map = new naver.maps.Map('naver-map', {
-      center: churchLocation,
+      center: new naver.maps.LatLng(35.1041080, 128.9256620),
       zoom: 17,
       mapTypeId: naver.maps.MapTypeId.NORMAL
     });
-    var marker = new naver.maps.Marker({
-      position: churchLocation,
-      map: map
-    });
+    var marker = new naver.maps.Marker({ map: map });
     var infoWindow = new naver.maps.InfoWindow({
       content: '<div style="padding:10px;font-size:13px;font-family:Noto Sans KR,sans-serif;">' +
                '<b>큰빛교회</b><br>부산 강서구 명지국제11로 66, 5층</div>'
     });
+
+    // 주소로 정확한 좌표 자동 검색
+    naver.maps.Service.geocode(
+      { query: '부산광역시 강서구 명지국제11로 66 큰빛교회' },
+      function(status, response) {
+        if (status === naver.maps.Service.Status.OK && response.v2.addresses.length > 0) {
+          var addr = response.v2.addresses[0];
+          var pos = new naver.maps.LatLng(addr.y, addr.x);
+          map.setCenter(pos);
+          marker.setPosition(pos);
+        }
+      }
+    );
+
     naver.maps.Event.addListener(marker, 'click', function () {
       if (infoWindow.getMap()) {
         infoWindow.close();
