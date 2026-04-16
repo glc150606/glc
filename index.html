@@ -387,40 +387,41 @@ header.scrolled {
   transition: background var(--transition);
 }
 .hp-box:hover::before {
-  background: rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.25);
 }
 .hp-box:hover {
   transform: scale(0.98);
+  box-shadow: 0 8px 30px rgba(255,200,50,0.35);
 }
 .hp-box .hp-icon {
   font-size: 36px;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 .hp-box .hp-title {
   font-size: 15px;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 800;
+  color: #3d2b00;
   position: relative;
   z-index: 1;
   text-align: center;
 }
 .hp-box .hp-sub {
   font-size: 12px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(80,50,0,0.65);
   position: relative;
   z-index: 1;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
 }
-.hp-worship  { background: #1565c0; }
-.hp-broadcast { background: #c62828; }
-.hp-school   { background: #2e7d32; }
-.hp-ministry { background: #e65100; }
-.hp-location { background: #6a1b9a; }
-.hp-new      { background: #00695c; }
+.hp-worship   { background: linear-gradient(145deg, #fff9c4, #ffe066); }
+.hp-broadcast { background: linear-gradient(145deg, #ffe5b4, #ffb347); }
+.hp-school    { background: linear-gradient(145deg, #fffde7, #ffd740); }
+.hp-ministry  { background: linear-gradient(145deg, #ffd6a5, #ffa552); }
+.hp-location  { background: linear-gradient(145deg, #fff3cd, #ffca28); }
+.hp-new       { background: linear-gradient(145deg, #ffecd2, #ffcc80); }
 
 /* ===== WORSHIP SECTION ===== */
 .worship-section {
