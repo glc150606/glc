@@ -424,76 +424,71 @@ header.scrolled {
 
 /* ===== WORSHIP SECTION ===== */
 .worship-section {
-  background: var(--bg);
-  padding-bottom: 70px;
+  background: var(--white);
+  padding-bottom: 80px;
 }
-.worship-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 1100px;
+.worship-wrap {
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 40px;
 }
-.worship-card {
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: linear-gradient(145deg, var(--navy) 0%, var(--navy-dark) 100%);
-  color: #fff;
-  padding: 36px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transition: transform var(--transition), box-shadow var(--transition);
-  cursor: pointer;
-  position: relative;
-}
-.worship-card::before {
-  content: '';
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.04);
-}
-.worship-card:nth-child(2) {
-  background: linear-gradient(145deg, #1976d2, #0d47a1);
-}
-.worship-card:nth-child(3) {
-  background: linear-gradient(145deg, #1565c0, #0a3a7a);
-}
-.worship-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 36px rgba(21,54,110,0.3);
-}
-.w-icon {
-  font-size: 38px;
-  margin-bottom: 4px;
-}
-.w-type {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: var(--yellow);
-  text-transform: uppercase;
-}
-.worship-card h3 {
-  font-size: 22px;
+.worship-table-title {
+  font-size: 17px;
   font-weight: 800;
-  margin-bottom: 2px;
+  color: var(--white);
+  background: var(--navy);
+  padding: 14px 24px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.w-time {
+.worship-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  margin-bottom: 0;
+}
+.worship-table thead tr {
+  background: #f0f4fb;
+}
+.worship-table thead th {
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  text-align: left;
+  border-bottom: 2px solid var(--navy);
+}
+.worship-table tbody tr {
+  border-bottom: 1px solid #eeeeee;
+  transition: background var(--transition);
+}
+.worship-table tbody tr:last-child { border-bottom: none; }
+.worship-table tbody tr:hover { background: #f5f8ff; }
+.worship-table td {
+  padding: 16px 20px;
   font-size: 15px;
-  opacity: 0.8;
-  font-weight: 300;
+  color: #444;
+  vertical-align: middle;
 }
-.w-divider {
-  width: 30px;
-  height: 2px;
-  background: var(--yellow);
-  margin: 6px 0;
+.worship-table td:first-child {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 15px;
+  width: 40%;
+}
+.worship-table td:nth-child(2) {
+  font-weight: 500;
+  color: #333;
+  width: 35%;
+}
+.worship-table td:last-child {
+  color: #777;
+  font-size: 14px;
+  width: 25%;
 }
 
 /* ===== PASTOR SECTION ===== */
@@ -911,12 +906,9 @@ footer .copyright {
   .hp-box .hp-sub { display: none; }
 
   /* Worship */
-  .worship-grid {
-    grid-template-columns: 1fr;
-    padding: 0 16px;
-    gap: 16px;
-  }
-  .worship-card { padding: 28px 22px; }
+  .worship-wrap { padding: 0 16px; }
+  .worship-table td, .worship-table thead th { padding: 12px 12px; font-size: 13px; }
+  .worship-table td:first-child { font-size: 13px; }
 
   /* Pastor */
   .pastor-section { padding: 60px 16px; }
@@ -948,7 +940,7 @@ footer .copyright {
     grid-template-columns: repeat(2, 1fr);
   }
   .album-grid { grid-template-columns: repeat(2, 1fr); }
-  .worship-grid { grid-template-columns: 1fr; }
+  .worship-table td { padding: 10px; font-size: 12px; }
   .top-bar .divider { display: none; }
 }
 </style>
@@ -1076,28 +1068,50 @@ footer .copyright {
     <p>그리스도의 말씀이 풍성히 거하여 모든 지혜로 서로 가르치며 권면합니다 — 골 3:16</p>
   </div>
 
-  <div class="worship-grid">
-    <div class="worship-card">
-      <div class="w-icon">🙏</div>
-      <div class="w-type">Sunday Service</div>
-      <h3>주일예배</h3>
-      <div class="w-divider"></div>
-      <div class="w-time">주일 오전 10:00</div>
-    </div>
-    <div class="worship-card">
-      <div class="w-icon">📖</div>
-      <div class="w-type">Afternoon Service</div>
-      <h3>주일오후예배</h3>
-      <div class="w-divider"></div>
-      <div class="w-time">주일 오후 1:30</div>
-    </div>
-    <div class="worship-card">
-      <div class="w-icon">✝️</div>
-      <div class="w-type">Evening Prayer</div>
-      <h3>매일저녁기도회</h3>
-      <div class="w-divider"></div>
-      <div class="w-time">매일 오후 8:00</div>
-    </div>
+  <div class="worship-wrap">
+    <!-- 주일 예배 -->
+    <div class="worship-table-title">🙏 주일 예배</div>
+    <table class="worship-table">
+      <thead>
+        <tr>
+          <th>예배명</th>
+          <th>시간</th>
+          <th>장소</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>주일예배</td>
+          <td>주일 오전 10:00</td>
+          <td>본당</td>
+        </tr>
+        <tr>
+          <td>주일오후예배</td>
+          <td>주일 오후 1:30</td>
+          <td>본당</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 기도회 -->
+    <div class="worship-table-title">✝️ 기도회</div>
+    <table class="worship-table">
+      <thead>
+        <tr>
+          <th>모임명</th>
+          <th>시간</th>
+          <th>장소</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>매일저녁기도회</td>
+          <td>매일 오후 8:00</td>
+          <td>본당</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   </div>
 </section>
 
