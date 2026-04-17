@@ -631,6 +631,65 @@ header.scrolled {
   padding: 80px 40px;
   scroll-margin-top: 80px;
 }
+.vision-declaration {
+  max-width: 1000px;
+  margin: 10px auto 50px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FCEEF1 100%);
+  border-radius: 20px;
+  padding: 48px 52px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid #C8566E;
+  position: relative;
+  overflow: hidden;
+}
+.vision-declaration::before {
+  content: '“';
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 140px;
+  color: rgba(200, 86, 110, 0.12);
+  font-family: Georgia, serif;
+  line-height: 1;
+  pointer-events: none;
+}
+.vd-title { margin-bottom: 28px; }
+.vd-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #C8566E;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.vd-title h3 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #3E3E3E;
+  line-height: 1.45;
+  letter-spacing: -0.5px;
+}
+.vd-body h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #A83C56;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #E07A8F;
+}
+.vd-body p {
+  font-size: 15px;
+  line-height: 2;
+  color: #444;
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+.vd-body p:last-child { margin-bottom: 0; }
+.vd-body strong {
+  color: #A83C56;
+  font-weight: 700;
+}
 .vision-grid {
   max-width: 1200px;
   margin: 40px auto 0;
@@ -964,6 +1023,9 @@ footer .copyright {
     gap: 20px;
   }
   .vision-section { padding: 60px 20px; }
+  .vision-declaration { padding: 32px 24px; margin: 10px 0 36px; }
+  .vd-title h3 { font-size: 20px; }
+  .vision-declaration::before { font-size: 100px; right: 16px; }
   .hotpoint-grid {
     flex-direction: column;
     height: auto;
@@ -1286,6 +1348,32 @@ footer .copyright {
     <h2>교회 <span class="accent">비전</span></h2>
     <p>큰빛교회가 지향하는 세 가지 방향</p>
   </div>
+
+  <div class="vision-declaration">
+    <div class="vd-title">
+      <span class="vd-label">큰빛교회 비전 선언문</span>
+      <h3>본질 위에 서서, 열방을 향해,<br>재림을 소망하는 교회</h3>
+    </div>
+    <div class="vd-body">
+      <h4>서문 — 우리의 정체성과 사명을 선언하며</h4>
+      <p>
+        이 비전 선언문으로, 우리는 우리 교회의 존재 이유와 나아갈 방향을
+        하나님과 세상 앞에 엄숙히 선포한다. 우리 교회는 단순한 물리적
+        건물이 아니라, 이 땅 위에 <strong>하나님의 거룩한 통치가 임하는
+        생명의 공동체</strong>이다. 우리는 이 문서를 통해 교회의 흔들리지
+        않는 기초가 무엇이며, 우리가 어디를 향해 나아가고, 궁극적으로
+        무엇을 소망해야 하는지를 천명한다.
+      </p>
+      <p>
+        앞으로 전개될 세 가지 핵심 가치,
+        <strong>‘성경적 교회’</strong>, <strong>‘선교적 교회’</strong>,
+        그리고 <strong>‘시대적 교회’</strong>는 우리의 모든 사역과 신앙을
+        이끌어갈 기둥이다. 이 가치들은 우리 공동체가 주님 오시는 그날까지
+        감당해야 할 거룩한 여정의 이정표가 될 것이다.
+      </p>
+    </div>
+  </div>
+
   <div class="vision-grid">
     <div class="vision-card">
       <div class="vision-number">VISION 01</div>
