@@ -758,6 +758,99 @@ header.scrolled {
   font-weight: 300;
 }
 
+/* ===== DENOMINATION SECTION ===== */
+.denom-section {
+  background: var(--white);
+  padding: 80px 40px;
+  scroll-margin-top: 80px;
+}
+.denom-inner {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: linear-gradient(135deg, #FAFAFA 0%, #F5F4F4 100%);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: var(--shadow);
+}
+.denom-logo {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(37, 99, 178, 0.15);
+  padding: 20px;
+}
+.denom-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.denom-info { flex: 1; }
+.denom-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #2563B2;
+  background: #E6F0FA;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.denom-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3E3E3E;
+  line-height: 1.55;
+  margin-bottom: 22px;
+  letter-spacing: -0.3px;
+}
+.denom-info h3 strong {
+  color: #2563B2;
+  font-weight: 900;
+}
+.denom-info p {
+  font-size: 15px;
+  color: #555;
+  line-height: 2;
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+.denom-info p strong {
+  color: #A83C56;
+  font-weight: 700;
+}
+.denom-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px dashed #D0D0D0;
+}
+.denom-stat { text-align: center; }
+.denom-stat .stat-num {
+  font-size: 28px;
+  font-weight: 900;
+  color: #2563B2;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.denom-stat .stat-label {
+  font-size: 12px;
+  color: #777;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
 /* ===== ALBUM SECTION ===== */
 .album-section {
   background: var(--bg);
@@ -1034,6 +1127,16 @@ footer .copyright {
     gap: 20px;
   }
   .vision-section { padding: 60px 20px; }
+  .denom-inner {
+    flex-direction: column;
+    padding: 32px 22px;
+    gap: 28px;
+    text-align: center;
+  }
+  .denom-logo { width: 160px; height: 160px; padding: 14px; }
+  .denom-info h3 { font-size: 18px; }
+  .denom-stats { grid-template-columns: 1fr; gap: 14px; }
+  .denom-section { padding: 60px 20px; }
   .vision-declaration { padding: 32px 24px; margin: 10px 0 36px; }
   .vd-title h3 { font-size: 20px; }
   .vision-declaration::before { font-size: 100px; right: 16px; }
@@ -1175,6 +1278,7 @@ footer .copyright {
     <ul>
       <li><a href="#about">교회소개</a></li>
       <li><a href="#vision">교회비전</a></li>
+      <li><a href="#denomination">교단소개</a></li>
       <li><a href="#worship">교회안내</a></li>
       <li><a href="https://youtube.com/channel/UCI42sRG1BVjab3915AeGtsQ" target="_blank" rel="noopener">교회방송</a></li>
       <li><a href="#hotpoint">교회학교</a></li>
@@ -1426,6 +1530,47 @@ footer .copyright {
         오늘을 살아갑니다. 막연한 두려움이 아닌, 영적 무장을 통해
         세상 속에서 승리하는 종말론적 성도를 길러냅니다.
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DENOMINATION SECTION ===== -->
+<section class="denom-section" id="denomination">
+  <div class="section-header">
+    <span class="label">Our Denomination</span>
+    <h2>교단 <span class="accent">소개</span></h2>
+    <p>큰빛교회가 속한 교단을 소개합니다</p>
+  </div>
+  <div class="denom-inner">
+    <div class="denom-logo">
+      <img src="kosin-logo.jpg" alt="대한예수교장로회 고신총회">
+    </div>
+    <div class="denom-info">
+      <span class="denom-tag">대한예수교장로회 (고신)</span>
+      <h3>큰빛교회가 속한 교단은<br><strong>대한예수교장로회(고신)</strong>입니다.</h3>
+      <p>
+        고신교단은 일제 신사참배를 거부하다가 투옥되었던 17명의 목사와
+        성도들이 <strong>1945년 8월 17일</strong>에 출옥하며 시작되었습니다.
+      </p>
+      <p>
+        우리는 <strong>웨스트민스터 신앙고백서와 대소교리문답</strong>을
+        신앙의 표준으로 삼고, <strong>하나님 중심, 성경 중심, 교회 중심</strong>의
+        생활원리로 살고 있습니다.
+      </p>
+      <div class="denom-stats">
+        <div class="denom-stat">
+          <div class="stat-num">2,110</div>
+          <div class="stat-label">전국 교회</div>
+        </div>
+        <div class="denom-stat">
+          <div class="stat-num">412,288</div>
+          <div class="stat-label">성도 (2020년 기준)</div>
+        </div>
+        <div class="denom-stat">
+          <div class="stat-num">1945</div>
+          <div class="stat-label">교단 설립</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
