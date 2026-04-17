@@ -851,6 +851,189 @@ header.scrolled {
   letter-spacing: 0.3px;
 }
 
+/* ===== MISSION SECTION ===== */
+.mission-section {
+  background: var(--bg);
+  padding: 80px 40px;
+  scroll-margin-top: 80px;
+}
+.mission-grid {
+  max-width: 1100px;
+  margin: 30px auto 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.mission-card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 40px 34px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid #E07A8F;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.mission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(200, 86, 110, 0.16);
+}
+.mission-card .mission-icon {
+  font-size: 44px;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+.mission-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #C8566E;
+  background: #FCEEF1;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.mission-card h3 {
+  font-size: 22px;
+  font-weight: 900;
+  color: #3E3E3E;
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+.mission-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.95;
+  font-weight: 300;
+}
+.mission-card p strong {
+  color: #A83C56;
+  font-weight: 700;
+}
+
+.missionary-section {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.missionary-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.missionary-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #C8566E;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.missionary-header h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #3E3E3E;
+}
+.missionary-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+.missionary-photo {
+  background: #F5F4F4;
+  min-height: 420px;
+  overflow: hidden;
+}
+.missionary-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.missionary-info { padding: 40px 38px; }
+.mission-country {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2563B2;
+  background: #E6F0FA;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.missionary-info h4 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #3E3E3E;
+  margin-bottom: 4px;
+  letter-spacing: -0.3px;
+}
+.missionary-family {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 22px;
+}
+.missionary-info blockquote {
+  font-size: 14px;
+  line-height: 1.95;
+  color: #555;
+  font-weight: 300;
+  background: #FCEEF1;
+  border-left: 3px solid #E07A8F;
+  padding: 16px 18px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 22px;
+  font-style: italic;
+}
+.missionary-info blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #A83C56;
+  font-weight: 700;
+  font-style: normal;
+}
+.prayer-box {
+  background: #FAFAFA;
+  border-radius: 12px;
+  padding: 22px 24px;
+}
+.prayer-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #A83C56;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+.prayer-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.prayer-box li {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.85;
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.prayer-box li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C8566E;
+}
+
 /* ===== ALBUM SECTION ===== */
 .album-section {
   background: var(--bg);
@@ -1137,6 +1320,12 @@ footer .copyright {
   .denom-info h3 { font-size: 18px; }
   .denom-stats { grid-template-columns: 1fr; gap: 14px; }
   .denom-section { padding: 60px 20px; }
+  .mission-section { padding: 60px 20px; }
+  .mission-grid { grid-template-columns: 1fr; gap: 18px; }
+  .missionary-card { grid-template-columns: 1fr; }
+  .missionary-photo { min-height: 320px; }
+  .missionary-info { padding: 30px 24px; }
+  .missionary-info h4 { font-size: 22px; }
   .vision-declaration { padding: 32px 24px; margin: 10px 0 36px; }
   .vd-title h3 { font-size: 20px; }
   .vision-declaration::before { font-size: 100px; right: 16px; }
@@ -1279,6 +1468,7 @@ footer .copyright {
       <li><a href="#about">교회소개</a></li>
       <li><a href="#vision">교회비전</a></li>
       <li><a href="#denomination">교단소개</a></li>
+      <li><a href="#mission">교회선교</a></li>
       <li><a href="#worship">교회안내</a></li>
       <li><a href="https://youtube.com/channel/UCI42sRG1BVjab3915AeGtsQ" target="_blank" rel="noopener">교회방송</a></li>
       <li><a href="#hotpoint">교회학교</a></li>
@@ -1569,6 +1759,71 @@ footer .copyright {
         <div class="denom-stat">
           <div class="stat-num">1945</div>
           <div class="stat-label">교단 설립</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MISSION SECTION ===== -->
+<section class="mission-section" id="mission">
+  <div class="section-header">
+    <span class="label">Missions</span>
+    <h2>교회 <span class="accent">선교</span></h2>
+    <p>복음의 생명수를 담장 너머로 흘려보내는 사역</p>
+  </div>
+
+  <div class="mission-grid">
+    <div class="mission-card">
+      <div class="mission-icon">🏙️</div>
+      <div class="mission-tag">일상선교</div>
+      <h3>신도시 사역</h3>
+      <p>
+        겉으로는 현대적이고 물질적인 풍요를 누리지만, 내면에는
+        깊은 영적 갈급함을 느끼는 현대인들이 모여드는 신도시를 향해
+        나아가 <strong>'복음의 생명수'</strong>를 전합니다.
+      </p>
+    </div>
+    <div class="mission-card">
+      <div class="mission-icon">🌏</div>
+      <div class="mission-tag">해외선교</div>
+      <h3>일본 선교</h3>
+      <p>
+        복음화율이 1% 미만인 <strong>'영적 불모지'인 일본</strong>을
+        가슴에 품고, 가장 가까운 이웃 나라인 그 땅에 복음의 씨앗을
+        심는 사역에 헌신합니다.
+      </p>
+    </div>
+  </div>
+
+  <div class="missionary-section">
+    <div class="missionary-header">
+      <span class="missionary-label">파송 선교사</span>
+      <h3>큰빛교회 파송 선교사</h3>
+    </div>
+    <div class="missionary-card">
+      <div class="missionary-photo">
+        <img src="missionary-japan.jpg" alt="김으뜸 · 송찬미 선교사 가정 (일본)">
+      </div>
+      <div class="missionary-info">
+        <div class="mission-country">🇯🇵 일본 선교사</div>
+        <h4>김으뜸 · 송찬미</h4>
+        <div class="missionary-family">자녀 — 김신, 김하루</div>
+        <blockquote>
+          "너희 중에 어떤 사람이 양 백 마리가 있는데 그 중의 하나를
+          잃으면 아흔아홉 마리를 들에 두고 그 잃은 것을 찾아내기까지
+          찾아다니지 아니하겠느냐"
+          <cite>— 누가복음 15:4</cite>
+        </blockquote>
+        <div class="prayer-box">
+          <div class="prayer-title">🙏 기도제목</div>
+          <ul>
+            <li>가족 모두가 성령 충만하여 하나님 뜻대로 살아가기를</li>
+            <li>하나님과 늘 동행하여 하나님을 드러내는 삶 살기를</li>
+            <li>전도의 문이 열리며 복음을 담대하게 전할 수 있기를</li>
+            <li>일본을 향한 하나님의 마음을 늘 깨달아 일본을 더 사랑하기를</li>
+            <li>가족이 일본에 잘 적응하며 생활에 어려움이 없기를</li>
+          </ul>
         </div>
       </div>
     </div>
