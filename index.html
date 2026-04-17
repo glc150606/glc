@@ -369,7 +369,7 @@ header.scrolled {
 .hotpoint-right {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
 .hp-box {
@@ -422,20 +422,28 @@ header.scrolled {
   line-height: 1.5;
 }
 .hp-worship   { background: #E98FA6; }
-.hp-broadcast { background: #EEA5B7; }
-.hp-school    { background: #F3B8C6; }
-.hp-ministry  { background: #F7CBD4; }
-.hp-location  { background: #FBE0E5; }
-.hp-new       { background: #FFF1F3; }
-.hp-ministry .hp-title,
-.hp-ministry .hp-sub,
+.hp-pastor    { background: #EEA5B7; }
+.hp-vision    { background: #F2B5C0; }
+.hp-denom     { background: #F7CBD4; }
+.hp-mission   { background: #FADCE2; }
+.hp-album     { background: #FBE0E5; }
+.hp-location  { background: #FCEEF1; }
+.hp-broadcast { background: #FFF1F3; }
+.hp-denom .hp-title,
+.hp-denom .hp-sub,
+.hp-mission .hp-title,
+.hp-mission .hp-sub,
+.hp-album .hp-title,
+.hp-album .hp-sub,
 .hp-location .hp-title,
 .hp-location .hp-sub,
-.hp-new .hp-title,
-.hp-new .hp-sub { color: #5A2030; }
-.hp-ministry .hp-sub,
+.hp-broadcast .hp-title,
+.hp-broadcast .hp-sub { color: #5A2030; }
+.hp-denom .hp-sub,
+.hp-mission .hp-sub,
+.hp-album .hp-sub,
 .hp-location .hp-sub,
-.hp-new .hp-sub { color: rgba(90,32,48,0.7); }
+.hp-broadcast .hp-sub { color: rgba(90,32,48,0.7); }
 
 /* ===== WORSHIP SECTION ===== */
 .worship-section {
@@ -511,7 +519,10 @@ header.scrolled {
 .pastor-section {
   background: var(--white);
   scroll-margin-top: 80px;
-  padding: 80px 40px;
+  padding: 80px 40px 80px;
+}
+.pastor-section .section-header {
+  padding-top: 0;
 }
 .pastor-inner {
   max-width: 1000px;
@@ -1034,6 +1045,106 @@ header.scrolled {
   background: #C8566E;
 }
 
+/* ===== BROADCAST SECTION ===== */
+.broadcast-section {
+  background: #1a1a1a;
+  padding: 80px 40px;
+  scroll-margin-top: 80px;
+  color: #fff;
+}
+.broadcast-section .section-header .label { color: #FF6B85; }
+.broadcast-section .section-header h2 { color: #fff; }
+.broadcast-section .section-header h2 .accent { color: #FF6B85; }
+.broadcast-section .section-header p { color: rgba(255,255,255,0.6); }
+.broadcast-inner {
+  max-width: 800px;
+  margin: 30px auto 0;
+}
+.broadcast-card {
+  background: linear-gradient(135deg, #2a1a1e 0%, #3e1e26 100%);
+  border-radius: 20px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255, 107, 133, 0.15);
+}
+.broadcast-icon {
+  font-size: 56px;
+  margin-bottom: 18px;
+}
+.broadcast-card h3 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+.broadcast-card p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.broadcast-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ff0000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 32px;
+  border-radius: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  letter-spacing: 0.3px;
+}
+.broadcast-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+}
+.broadcast-cta .yt-badge {
+  width: 26px;
+  height: 19px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  flex-shrink: 0;
+}
+.broadcast-cta .yt-badge::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-40%, -50%);
+  border-left: 8px solid #ff0000;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.broadcast-cta .arrow {
+  transition: transform 0.3s ease;
+}
+.broadcast-cta:hover .arrow {
+  transform: translateX(4px);
+}
+.broadcast-features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  flex-wrap: wrap;
+}
+.bc-feature {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bc-feature .bc-ico { font-size: 16px; }
+
 /* ===== ALBUM SECTION ===== */
 .album-section {
   background: var(--bg);
@@ -1294,7 +1405,7 @@ footer .copyright {
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 1100px) {
   .hotpoint-right {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .album-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1386,8 +1497,12 @@ footer .copyright {
   .hotpoint-left-content h3 { font-size: 20px; }
   .hotpoint-left-content p { font-size: 13px; }
   .hotpoint-right {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
+  .broadcast-section { padding: 60px 20px; }
+  .broadcast-card { padding: 36px 24px; }
+  .broadcast-card h3 { font-size: 22px; }
+  .broadcast-features { gap: 16px; }
   .hp-box { min-height: 120px; padding: 20px 10px; }
   .hp-box .hp-icon { font-size: 28px; }
   .hp-box .hp-title { font-size: 13px; }
@@ -1465,15 +1580,14 @@ footer .copyright {
 
   <nav class="main-nav" id="main-nav">
     <ul>
-      <li><a href="#about">교회소개</a></li>
+      <li><a href="#worship">큰빛교회예배</a></li>
+      <li><a href="#about">섬기는이</a></li>
       <li><a href="#vision">교회비전</a></li>
       <li><a href="#denomination">교단소개</a></li>
       <li><a href="#mission">교회선교</a></li>
-      <li><a href="#worship">교회안내</a></li>
-      <li><a href="https://youtube.com/channel/UCI42sRG1BVjab3915AeGtsQ" target="_blank" rel="noopener">교회방송</a></li>
-      <li><a href="#hotpoint">교회학교</a></li>
-      <li><a href="#hotpoint">교회사역</a></li>
-      <li><a href="#album">교회소식</a></li>
+      <li><a href="#album">큰빛교회앨범</a></li>
+      <li><a href="#location">오시는길</a></li>
+      <li><a href="#broadcast">교회방송</a></li>
     </ul>
   </nav>
 </header>
@@ -1515,37 +1629,47 @@ footer .copyright {
       </div>
     </div>
 
-    <!-- Right: 6 Boxes -->
+    <!-- Right: 8 Boxes -->
     <div class="hotpoint-right">
       <a href="#worship" class="hp-box hp-worship">
         <div class="hp-icon">⛪</div>
-        <div class="hp-title">예배시간</div>
+        <div class="hp-title">큰빛교회예배</div>
         <div class="hp-sub">주일 오전 10:00<br>주일 오후 1:30</div>
       </a>
-      <a href="https://youtube.com/channel/UCI42sRG1BVjab3915AeGtsQ" target="_blank" rel="noopener" class="hp-box hp-broadcast">
-        <div class="hp-icon">📺</div>
-        <div class="hp-title">교회방송</div>
-        <div class="hp-sub">유튜브 실시간<br>예배 방송</div>
+      <a href="#about" class="hp-box hp-pastor">
+        <div class="hp-icon">👨‍💼</div>
+        <div class="hp-title">섬기는이</div>
+        <div class="hp-sub">담임목사<br>최진용 목사</div>
       </a>
-      <a href="#" class="hp-box hp-school">
-        <div class="hp-icon">📚</div>
-        <div class="hp-title">교회학교</div>
-        <div class="hp-sub">다음세대를<br>위한 교육</div>
+      <a href="#vision" class="hp-box hp-vision">
+        <div class="hp-icon">🌟</div>
+        <div class="hp-title">교회비전</div>
+        <div class="hp-sub">성경적·선교적<br>시대적 교회</div>
       </a>
-      <a href="#" class="hp-box hp-ministry">
-        <div class="hp-icon">🤝</div>
-        <div class="hp-title">교회사역</div>
-        <div class="hp-sub">지역 사회와<br>함께하는 섬김</div>
+      <a href="#denomination" class="hp-box hp-denom">
+        <div class="hp-icon">✝️</div>
+        <div class="hp-title">교단소개</div>
+        <div class="hp-sub">대한예수교장로회<br>(고신)</div>
+      </a>
+      <a href="#mission" class="hp-box hp-mission">
+        <div class="hp-icon">🌏</div>
+        <div class="hp-title">교회선교</div>
+        <div class="hp-sub">신도시 사역<br>일본 선교</div>
+      </a>
+      <a href="#album" class="hp-box hp-album">
+        <div class="hp-icon">📷</div>
+        <div class="hp-title">큰빛교회앨범</div>
+        <div class="hp-sub">아름다운<br>순간들</div>
       </a>
       <a href="#location" class="hp-box hp-location">
         <div class="hp-icon">📍</div>
         <div class="hp-title">오시는길</div>
         <div class="hp-sub">명지국제신도시<br>명지국제11로 66</div>
       </a>
-      <a href="#about" class="hp-box hp-new">
-        <div class="hp-icon">👋</div>
-        <div class="hp-title">새가족안내</div>
-        <div class="hp-sub">처음 오신 분을<br>환영합니다</div>
+      <a href="#broadcast" class="hp-box hp-broadcast">
+        <div class="hp-icon">📺</div>
+        <div class="hp-title">교회방송</div>
+        <div class="hp-sub">유튜브 실시간<br>예배 방송</div>
       </a>
     </div>
   </div>
@@ -1618,6 +1742,11 @@ footer .copyright {
 
 <!-- ===== PASTOR SECTION ===== -->
 <section class="pastor-section" id="about">
+  <div class="section-header">
+    <span class="label">Our Minister</span>
+    <h2>섬기는 <span class="accent">이</span></h2>
+    <p>큰빛교회를 섬기는 담임목사 인사</p>
+  </div>
   <div class="pastor-inner">
     <div class="pastor-photo"><img src="pastor.jpg" alt="최진용 목사"></div>
     <div class="pastor-info">
@@ -1900,6 +2029,36 @@ footer .copyright {
           교회 건물 지하 주차장 이용<br>
           또는 <strong style="color:#F2B5C0;">울림공원 주차장</strong> 이용
         </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BROADCAST SECTION ===== -->
+<section class="broadcast-section" id="broadcast">
+  <div class="section-header">
+    <span class="label">Broadcast</span>
+    <h2>교회 <span class="accent">방송</span></h2>
+    <p>언제 어디서나 함께하는 큰빛교회 예배</p>
+  </div>
+  <div class="broadcast-inner">
+    <div class="broadcast-card">
+      <div class="broadcast-icon">📺</div>
+      <h3>큰빛교회 유튜브 채널</h3>
+      <p>
+        주일예배, 주일오후예배 실시간 중계와 다시보기,<br>
+        설교 말씀을 유튜브 채널에서 함께하실 수 있습니다.
+      </p>
+      <a href="https://youtube.com/channel/UCI42sRG1BVjab3915AeGtsQ"
+         target="_blank" rel="noopener" class="broadcast-cta">
+        <span class="yt-badge"></span>
+        유튜브 채널 바로가기
+        <span class="arrow">→</span>
+      </a>
+      <div class="broadcast-features">
+        <div class="bc-feature"><span class="bc-ico">🔴</span> 실시간 예배 송출</div>
+        <div class="bc-feature"><span class="bc-ico">▶️</span> 설교 다시보기</div>
+        <div class="bc-feature"><span class="bc-ico">🔔</span> 구독 알림</div>
       </div>
     </div>
   </div>
