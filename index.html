@@ -524,14 +524,17 @@ header.scrolled {
   width: 260px;
   height: 320px;
   border-radius: 16px;
-  background: linear-gradient(145deg, #FAE8EC, #F2B5C0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
   flex-shrink: 0;
-  font-size: 72px;
   box-shadow: var(--shadow-lg);
   position: relative;
+}
+.pastor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 .pastor-photo::after {
   content: '';
@@ -586,6 +589,103 @@ header.scrolled {
   width: 24px;
   height: 2px;
   background: #E07A8F;
+}
+.pastor-bio {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid #EEE;
+}
+.pastor-bio h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3E3E3E;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+.pastor-bio ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pastor-bio li {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.9;
+  padding-left: 16px;
+  position: relative;
+}
+.pastor-bio li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C8566E;
+}
+
+/* ===== VISION SECTION ===== */
+.vision-section {
+  background: var(--bg);
+  padding: 80px 40px;
+  scroll-margin-top: 80px;
+}
+.vision-grid {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.vision-card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 38px 30px;
+  box-shadow: var(--shadow-lg);
+  border-top: 4px solid #C8566E;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.vision-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(200, 86, 110, 0.16);
+}
+.vision-number {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #C8566E;
+  margin-bottom: 10px;
+}
+.vision-card h3 {
+  font-size: 22px;
+  font-weight: 900;
+  color: #3E3E3E;
+  margin-bottom: 4px;
+}
+.vision-card .vision-eng {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+  margin-bottom: 18px;
+}
+.vision-card blockquote {
+  font-size: 14px;
+  color: #A83C56;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  padding: 10px 0 10px 14px;
+  border-left: 3px solid #E07A8F;
+  line-height: 1.55;
+  background: #FCEEF1;
+  border-radius: 0 6px 6px 0;
+  padding-right: 10px;
+}
+.vision-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.95;
+  font-weight: 300;
 }
 
 /* ===== ALBUM SECTION ===== */
@@ -859,6 +959,11 @@ footer .copyright {
   .location-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .vision-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .vision-section { padding: 60px 20px; }
   .hotpoint-grid {
     flex-direction: column;
     height: auto;
@@ -996,6 +1101,7 @@ footer .copyright {
   <nav class="main-nav" id="main-nav">
     <ul>
       <li><a href="#about">교회소개</a></li>
+      <li><a href="#vision">교회비전</a></li>
       <li><a href="#worship">교회안내</a></li>
       <li><a href="https://youtube.com/channel/UCI42sRG1BVjab3915AeGtsQ" target="_blank" rel="noopener">교회방송</a></li>
       <li><a href="#hotpoint">교회학교</a></li>
@@ -1146,7 +1252,7 @@ footer .copyright {
 <!-- ===== PASTOR SECTION ===== -->
 <section class="pastor-section" id="about">
   <div class="pastor-inner">
-    <div class="pastor-photo">👨‍💼</div>
+    <div class="pastor-photo"><img src="pastor.jpg" alt="최진용 목사"></div>
     <div class="pastor-info">
       <span class="tag">Pastor's Greeting</span>
       <h3>최진용 목사</h3>
@@ -1159,7 +1265,63 @@ footer .copyright {
         언제든지 큰빛교회의 문은 여러분을 위해 열려 있습니다.
         함께 예배하고, 함께 성장하며, 함께 섬기는 기쁨을 나누시길 바랍니다.
       </p>
+      <div class="pastor-bio">
+        <h4>약력</h4>
+        <ul>
+          <li>고신대학교 신학과</li>
+          <li>고려신학대학원 목회학</li>
+          <li>고신대학교 성경강해</li>
+          <li>저서: 『말씀체질』 / 『선교체질』 / 『구약파노라마』(공저)</li>
+        </ul>
+      </div>
       <div class="signature">최진용 목사</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISION SECTION ===== -->
+<section class="vision-section" id="vision">
+  <div class="section-header">
+    <span class="label">Our Vision</span>
+    <h2>교회 <span class="accent">비전</span></h2>
+    <p>큰빛교회가 지향하는 세 가지 방향</p>
+  </div>
+  <div class="vision-grid">
+    <div class="vision-card">
+      <div class="vision-number">VISION 01</div>
+      <h3>성경적 교회</h3>
+      <div class="vision-eng">Biblical Church</div>
+      <blockquote>"오직 기록된 하나님의 말씀으로 돌아가는 교회"</blockquote>
+      <p>
+        우리 교회는 성경 66권의 완전 영감설과 무오성을 믿으며,
+        개혁주의 신앙의 정수인 웨스트민스터 신앙고백서와 교리문답을
+        기초로 교회의 기초를 놓습니다. 사람의 철학이나 유행이 아닌,
+        성경적 예배모범과 교회의 표지가 살아 숨 쉬는 강단을 지향합니다.
+      </p>
+    </div>
+    <div class="vision-card">
+      <div class="vision-number">VISION 02</div>
+      <h3>선교적 교회</h3>
+      <div class="vision-eng">Missional Church</div>
+      <blockquote>"복음의 불모지에 생명을 심는 개척 정신"</blockquote>
+      <p>
+        우리는 하나님께 받은 은혜를 내부에만 가두지 않고 담장 너머로
+        흘려보냅니다. 국내외 사역지는 물론, 영적 갈급함이 큰 신도시와
+        복음의 문이 좁은 일본 땅을 향해 그리스도의 사랑을 들고
+        나아갑니다.
+      </p>
+    </div>
+    <div class="vision-card">
+      <div class="vision-number">VISION 03</div>
+      <h3>시대적 교회</h3>
+      <div class="vision-eng">Eschatological Church</div>
+      <blockquote>"다시 오실 신랑을 맞이하는 깨어 있는 신부"</blockquote>
+      <p>
+        지금은 영적인 밤이 깊어가는 마지막 때입니다. 우리는
+        요한계시록의 약속을 따라 시대를 분별하며, 재림의 소망을 품고
+        오늘을 살아갑니다. 막연한 두려움이 아닌, 영적 무장을 통해
+        세상 속에서 승리하는 종말론적 성도를 길러냅니다.
+      </p>
     </div>
   </div>
 </section>
