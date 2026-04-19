@@ -1841,6 +1841,79 @@ footer .footer-phone:hover { color: #F2B5C0; }
   font-weight: 800;
 }
 
+/* ===== GUEST ARTIST highlight ===== */
+.event-guest-strip {
+  background: linear-gradient(135deg, #2C3E7B 0%, #3A4FA0 100%);
+  color: #fff;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.event-guest-strip::before {
+  content: '♪';
+  position: absolute;
+  font-size: 110px;
+  opacity: 0.08;
+  right: 30px;
+  top: -20px;
+  font-family: 'Georgia', serif;
+  line-height: 1;
+}
+.event-guest-strip::after {
+  content: '♫';
+  position: absolute;
+  font-size: 80px;
+  opacity: 0.08;
+  right: 140px;
+  bottom: -20px;
+  font-family: 'Georgia', serif;
+  line-height: 1;
+}
+.guest-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #FFE08A;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.guest-name-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+.guest-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+.guest-name .en {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: #FFE08A;
+  margin-left: 8px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.guest-sub {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
 /* ===== CTA BAR below banner ===== */
 .event-cta-bar {
   background: #fff;
@@ -1890,6 +1963,10 @@ footer .footer-phone:hover { color: #F2B5C0; }
   .bb-bullet-circle { width: 56px; height: 56px; }
   .bb-bullet-list { font-size: 11px; left: 22px; top: 6px; }
   .event-cta-bar { flex-direction: column; text-align: center; padding: 22px 24px; }
+  .event-guest-strip { flex-direction: column; text-align: center; gap: 10px; padding: 18px 24px; }
+  .event-guest-strip::before, .event-guest-strip::after { display: none; }
+  .guest-name { font-size: 19px; }
+  .guest-name .en { font-size: 15px; display: block; margin-left: 0; margin-top: 2px; }
 }
 @media (max-width: 480px) {
   .blessing-banner { aspect-ratio: 0.95 / 1; }
@@ -2401,6 +2478,15 @@ footer .footer-phone:hover { color: #F2B5C0; }
         </div>
       </div>
 
+      <!-- Special Guest Artist Strip -->
+      <div class="event-guest-strip">
+        <span class="guest-label">🎤 SPECIAL GUEST</span>
+        <div class="guest-name-wrap">
+          <div class="guest-name">초대가수 바이브투 <span class="en">VIBE2</span></div>
+          <div class="guest-sub">감동적인 찬양과 함께하는 축복의 시간</div>
+        </div>
+      </div>
+
       <!-- CTA bar -->
       <div class="event-cta-bar">
         <div class="event-cta-text">
@@ -2533,6 +2619,7 @@ function shareEvent() {
     text: '💐 하나님의 축복을 세상에 전하는 블레싱데이!\n' +
           '📅 2026년 5월 31일 주일\n' +
           '⏰ 오전 11:00 / 오후 1:30\n' +
+          '🎤 초대가수 바이브투(VIBE2)\n' +
           '👨‍👩‍👧 나의가족 · 나의친구 · 나의이웃과 함께해요\n\n' +
           '큰빛교회에서 여러분을 초대합니다!',
     url: 'https://glc150606.github.io/glc/#events'
