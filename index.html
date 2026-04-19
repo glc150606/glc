@@ -1600,110 +1600,271 @@ footer .footer-phone:hover { color: #F2B5C0; }
 .events-section .section-header h2 .accent { color: #C8566E; }
 .events-section .section-header p { color: #777; }
 .events-inner {
-  max-width: 1100px;
+  max-width: 960px;
   margin: 0 auto;
 }
 .event-card {
   background: #fff;
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(200, 86, 110, 0.15);
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 0;
+  box-shadow: 0 16px 50px rgba(200, 86, 110, 0.18);
   border: 1px solid rgba(200, 86, 110, 0.08);
 }
-.event-banner {
+
+/* ===== BLESSING DAY BANNER (CSS Art) ===== */
+.blessing-banner {
   position: relative;
-  background: #F8F8F8;
+  aspect-ratio: 1.4 / 1;
+  background: linear-gradient(135deg, #FDF4F3 0%, #FBEDEA 50%, #FDF1EC 100%);
   overflow: hidden;
+  font-family: 'Noto Sans KR', sans-serif;
 }
-.event-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.event-info {
-  padding: 48px 44px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.event-badge {
-  display: inline-block;
-  background: #C8566E;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 5px 16px;
-  border-radius: 20px;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
-  align-self: flex-start;
-}
-.event-title-en {
-  font-size: 44px;
-  font-weight: 700;
-  color: #C8566E;
-  font-style: italic;
+/* Decorative flower clusters */
+.bb-flower {
+  position: absolute;
+  font-size: 72px;
   line-height: 1;
-  margin-bottom: 6px;
+  user-select: none;
+  filter: drop-shadow(0 4px 10px rgba(200,86,110,0.15));
+}
+.bb-flower.tl {
+  top: -12px;
+  left: -10px;
+  transform: rotate(-18deg);
+}
+.bb-flower.tl span:nth-child(1) { font-size: 64px; }
+.bb-flower.tl span:nth-child(2) { font-size: 80px; margin-left: -14px; }
+.bb-flower.tl span:nth-child(3) { font-size: 56px; margin-left: -10px; }
+.bb-flower.br {
+  bottom: -18px;
+  right: -10px;
+  transform: rotate(165deg);
+}
+.bb-flower.br span:nth-child(1) { font-size: 60px; }
+.bb-flower.br span:nth-child(2) { font-size: 82px; margin-left: -14px; }
+.bb-flower.br span:nth-child(3) { font-size: 58px; margin-left: -10px; }
+/* Soft bokeh dots */
+.bb-bokeh {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 70%);
+  pointer-events: none;
+}
+.bb-bokeh.b1 { width: 110px; height: 110px; top: 28%; left: 38%; }
+.bb-bokeh.b2 { width: 70px; height: 70px; top: 58%; left: 62%; }
+.bb-bokeh.b3 { width: 50px; height: 50px; top: 18%; left: 68%; }
+
+/* Invitation ribbon (top-right) */
+.bb-invitation {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  background: linear-gradient(180deg, #8C2B2E 0%, #A83535 100%);
+  color: #fff;
+  padding: 18px 20px 20px;
+  border-radius: 0 0 14px 14px;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 8px 20px rgba(140,43,46,0.35);
+  z-index: 4;
+}
+.bb-invitation::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 14px solid #A83535;
+}
+.bb-inv-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  opacity: 0.85;
+  margin-bottom: 8px;
   font-family: 'Georgia', serif;
+  font-style: italic;
 }
-.event-title-ko {
-  font-size: 30px;
-  font-weight: 800;
-  color: #2C3E7B;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
+.bb-inv-date {
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 1;
+  font-family: 'Georgia', serif;
+  position: relative;
+  display: inline-block;
+  padding: 2px 0;
 }
-.event-subtitle {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 24px;
-  padding-left: 14px;
-  border-left: 3px solid #F2B5C0;
+.bb-inv-date .slash {
+  display: inline-block;
+  transform: rotate(12deg);
+  margin: 0 -2px;
+  opacity: 0.7;
 }
-.event-date-row {
+.bb-inv-times {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
-  background: linear-gradient(135deg, #FCEEF1, #FFF);
-  border-radius: 14px;
-  margin-bottom: 14px;
-  border: 1px solid rgba(200, 86, 110, 0.1);
-}
-.event-date-big {
-  font-size: 30px;
-  font-weight: 800;
-  color: #C8566E;
-  line-height: 1;
-  min-width: 90px;
-  text-align: center;
-  border-right: 2px solid #F2B5C0;
-  padding-right: 16px;
-}
-.event-date-big .dm { font-size: 14px; display: block; font-weight: 600; margin-bottom: 4px; color: #A83C56; letter-spacing: 1px; }
-.event-times { font-size: 14px; color: #444; line-height: 1.9; }
-.event-times strong { color: #C8566E; font-weight: 700; }
-.event-audience {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
-.event-audience span {
-  display: inline-block;
-  background: #FCEEF1;
-  color: #A83C56;
-  font-size: 13px;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 12px;
   font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 20px;
+  line-height: 1.4;
 }
+.bb-sunday-pill {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+  padding: 8px 3px;
+  border-radius: 6px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.bb-times-stack { text-align: left; line-height: 1.5; }
+.bb-times-stack strong { color: #FFE08A; font-weight: 800; }
+
+/* Center composition */
+.bb-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  text-align: center;
+  z-index: 3;
+  width: 100%;
+  padding: 0 40px;
+}
+.bb-title-blessing {
+  font-family: 'Brush Script MT', 'Dancing Script', cursive;
+  font-size: clamp(60px, 12vw, 150px);
+  color: #8C2B2E;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  display: inline-block;
+  transform: rotate(-2deg);
+  text-shadow: 2px 3px 0 rgba(255,255,255,0.5);
+}
+.bb-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: -6px;
+}
+.bb-bullet-circle {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+}
+.bb-bullet-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(200,86,110,0.1);
+}
+.bb-bullet-dot {
+  position: absolute;
+  top: -6px;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  background: #C8566E;
+  border-radius: 50%;
+  z-index: 2;
+}
+.bb-bullet-list {
+  position: absolute;
+  top: 8px;
+  left: 28px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.45;
+  white-space: nowrap;
+  z-index: 3;
+}
+.bb-title-day {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: clamp(50px, 11vw, 130px);
+  color: #2C3E7B;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -3px;
+}
+
+/* Footer tagline */
+.bb-footer {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  padding: 0 20px;
+}
+.bb-foot-top {
+  color: #2C3E7B;
+  font-size: clamp(12px, 1.6vw, 16px);
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+.bb-foot-top em {
+  color: #C8566E;
+  font-style: normal;
+  font-weight: 800;
+}
+.bb-foot-bot {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  color: #2C3E7B;
+  font-size: clamp(16px, 2.4vw, 24px);
+  letter-spacing: -0.5px;
+}
+.bb-year {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #2C3E7B;
+}
+.bb-church-pill {
+  background: #2C3E7B;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: clamp(13px, 1.9vw, 18px);
+  font-weight: 800;
+}
+
+/* ===== CTA BAR below banner ===== */
+.event-cta-bar {
+  background: #fff;
+  padding: 28px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid rgba(200,86,110,0.12);
+}
+.event-cta-text {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  flex: 1;
+}
+.event-cta-text strong { color: #C8566E; }
 .event-share-btn {
   display: inline-flex;
   align-items: center;
@@ -1714,12 +1875,12 @@ footer .footer-phone:hover { color: #F2B5C0; }
   font-size: 15px;
   font-weight: 700;
   padding: 14px 28px;
-  border-radius: 14px;
+  border-radius: 12px;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 6px 18px rgba(254, 229, 0, 0.35);
-  align-self: flex-start;
+  flex-shrink: 0;
 }
 .event-share-btn:hover {
   transform: translateY(-2px);
@@ -1728,17 +1889,18 @@ footer .footer-phone:hover { color: #F2B5C0; }
 .event-share-btn .share-icon {
   font-size: 18px;
 }
-@media (max-width: 900px) {
-  .event-card { grid-template-columns: 1fr; }
-  .event-banner { min-height: 260px; }
-  .event-info { padding: 32px 26px; }
-  .event-title-en { font-size: 36px; }
-  .event-title-ko { font-size: 24px; }
+@media (max-width: 768px) {
   .events-section { padding: 60px 20px; }
+  .blessing-banner { aspect-ratio: 1.1 / 1; }
+  .bb-invitation { right: 16px; padding: 14px 14px 16px; min-width: 96px; }
+  .bb-inv-date { font-size: 34px; }
+  .bb-bullet-circle { width: 56px; height: 56px; }
+  .bb-bullet-list { font-size: 11px; left: 22px; top: 6px; }
+  .event-cta-bar { flex-direction: column; text-align: center; padding: 22px 24px; }
 }
 @media (max-width: 480px) {
-  .event-date-row { flex-direction: column; align-items: flex-start; gap: 10px; }
-  .event-date-big { border-right: none; border-bottom: 2px solid #F2B5C0; padding-right: 0; padding-bottom: 10px; min-width: 0; text-align: left; }
+  .blessing-banner { aspect-ratio: 0.95 / 1; }
+  .bb-flower.tl, .bb-flower.br { font-size: 52px; }
 }
 </style>
 </head>
@@ -2196,31 +2358,61 @@ footer .footer-phone:hover { color: #F2B5C0; }
   </div>
   <div class="events-inner">
     <div class="event-card">
-      <div class="event-banner">
-        <img src="blessing-day.jpg" alt="2026 큰빛교회 블레싱데이">
-      </div>
-      <div class="event-info">
-        <span class="event-badge">INVITATION</span>
-        <div class="event-title-en">Blessing Day</div>
-        <div class="event-title-ko">블레싱데이</div>
-        <p class="event-subtitle">
-          하나님의 축복을 세상에 전하는<br>
-          <strong style="color:#C8566E;">2026 큰빛교회 블레싱데이</strong>
-        </p>
-        <div class="event-date-row">
-          <div class="event-date-big">
-            <span class="dm">MAY</span>
-            5/31
-          </div>
-          <div class="event-times">
-            <strong>주일</strong><br>
-            오전 11:00 / 오후 1:30
+      <!-- Designed Blessing Day banner (pure HTML/CSS, no image) -->
+      <div class="blessing-banner">
+        <!-- Decorative flowers -->
+        <div class="bb-flower tl"><span>🌷</span><span>🌼</span><span>🌸</span></div>
+        <div class="bb-flower br"><span>🌷</span><span>🌼</span><span>🌸</span></div>
+        <!-- Soft bokeh -->
+        <div class="bb-bokeh b1"></div>
+        <div class="bb-bokeh b2"></div>
+        <div class="bb-bokeh b3"></div>
+
+        <!-- Top-right invitation ribbon -->
+        <div class="bb-invitation">
+          <div class="bb-inv-label">INVITATION</div>
+          <div class="bb-inv-date">5<span class="slash">/</span>31</div>
+          <div class="bb-inv-times">
+            <span class="bb-sunday-pill">주일</span>
+            <div class="bb-times-stack">
+              오전 <strong>11:00</strong><br>
+              오후 <strong>1:30</strong>
+            </div>
           </div>
         </div>
-        <div class="event-audience">
-          <span>💝 나의가족</span>
-          <span>🤝 나의친구</span>
-          <span>🏡 나의이웃</span>
+
+        <!-- Center title -->
+        <div class="bb-center">
+          <div class="bb-title-blessing">Blessing</div>
+          <div class="bb-title-row">
+            <div class="bb-bullet-circle">
+              <div class="bb-bullet-dot"></div>
+              <div class="bb-bullet-list">
+                나의가족<br>
+                나의친구<br>
+                나의이웃
+              </div>
+            </div>
+            <div class="bb-title-day">DAY</div>
+          </div>
+        </div>
+
+        <!-- Bottom tagline -->
+        <div class="bb-footer">
+          <div class="bb-foot-top">하나님의 <em>축복</em>을 세상에 전하는</div>
+          <div class="bb-foot-bot">
+            <span class="bb-year">2026</span>
+            <span class="bb-church-pill">큰빛교회</span>
+            블레싱데이
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA bar -->
+      <div class="event-cta-bar">
+        <div class="event-cta-text">
+          <strong>나의 가족, 친구, 이웃</strong>을 초대하세요.<br>
+          하나님의 축복을 함께 나누는 특별한 예배에 여러분을 초대합니다.
         </div>
         <button class="event-share-btn" onclick="shareEvent()">
           <span class="share-icon">💬</span>
