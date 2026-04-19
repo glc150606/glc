@@ -35,6 +35,8 @@
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+/* Per-section scroll offset overrides (fit card + header in one mobile viewport) */
+#events { scroll-margin-top: -20px; }
 body {
   font-family: 'Noto Sans KR', sans-serif;
   color: #333;
@@ -1509,6 +1511,8 @@ footer .footer-phone:hover { color: #F2B5C0; }
 @media (max-width: 768px) {
   /* Scroll offset matches mobile header height */
   html { scroll-padding-top: 64px; }
+  /* More aggressive offset on mobile so 교회행사 + 카드가 한 화면에 들어옴 */
+  #events { scroll-margin-top: -60px; }
 
   /* Top bar */
   .top-bar { padding: 0 16px; font-size: 12px; gap: 16px; }
