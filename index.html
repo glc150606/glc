@@ -1588,6 +1588,158 @@ footer .footer-phone:hover { color: #F2B5C0; }
   .worship-table td { padding: 10px; font-size: 12px; }
   .top-bar .divider { display: none; }
 }
+
+/* ===== EVENTS SECTION ===== */
+.events-section {
+  padding: 100px 40px;
+  background: linear-gradient(180deg, #FFF 0%, #FCEEF1 100%);
+  scroll-margin-top: 80px;
+}
+.events-section .section-header .label { color: #C8566E; }
+.events-section .section-header h2 { color: #3E3E3E; }
+.events-section .section-header h2 .accent { color: #C8566E; }
+.events-section .section-header p { color: #777; }
+.events-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.event-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(200, 86, 110, 0.15);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 0;
+  border: 1px solid rgba(200, 86, 110, 0.08);
+}
+.event-banner {
+  position: relative;
+  background: #F8F8F8;
+  overflow: hidden;
+}
+.event-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.event-info {
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.event-badge {
+  display: inline-block;
+  background: #C8566E;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+.event-title-en {
+  font-size: 44px;
+  font-weight: 700;
+  color: #C8566E;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 6px;
+  font-family: 'Georgia', serif;
+}
+.event-title-ko {
+  font-size: 30px;
+  font-weight: 800;
+  color: #2C3E7B;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+.event-subtitle {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  padding-left: 14px;
+  border-left: 3px solid #F2B5C0;
+}
+.event-date-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #FCEEF1, #FFF);
+  border-radius: 14px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(200, 86, 110, 0.1);
+}
+.event-date-big {
+  font-size: 30px;
+  font-weight: 800;
+  color: #C8566E;
+  line-height: 1;
+  min-width: 90px;
+  text-align: center;
+  border-right: 2px solid #F2B5C0;
+  padding-right: 16px;
+}
+.event-date-big .dm { font-size: 14px; display: block; font-weight: 600; margin-bottom: 4px; color: #A83C56; letter-spacing: 1px; }
+.event-times { font-size: 14px; color: #444; line-height: 1.9; }
+.event-times strong { color: #C8566E; font-weight: 700; }
+.event-audience {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.event-audience span {
+  display: inline-block;
+  background: #FCEEF1;
+  color: #A83C56;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+.event-share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #FEE500 0%, #FDD835 100%);
+  color: #3C1E1E;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(254, 229, 0, 0.35);
+  align-self: flex-start;
+}
+.event-share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(254, 229, 0, 0.5);
+}
+.event-share-btn .share-icon {
+  font-size: 18px;
+}
+@media (max-width: 900px) {
+  .event-card { grid-template-columns: 1fr; }
+  .event-banner { min-height: 260px; }
+  .event-info { padding: 32px 26px; }
+  .event-title-en { font-size: 36px; }
+  .event-title-ko { font-size: 24px; }
+  .events-section { padding: 60px 20px; }
+}
+@media (max-width: 480px) {
+  .event-date-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .event-date-big { border-right: none; border-bottom: 2px solid #F2B5C0; padding-right: 0; padding-bottom: 10px; min-width: 0; text-align: left; }
+}
 </style>
 </head>
 <body>
@@ -1628,6 +1780,7 @@ footer .footer-phone:hover { color: #F2B5C0; }
       <li><a href="#denomination">교단소개</a></li>
       <li><a href="#mission">교회선교</a></li>
       <li><a href="#album">큰빛교회앨범</a></li>
+      <li><a href="#events">교회행사</a></li>
       <li><a href="#broadcast">교회방송</a></li>
       <li><a href="#location">오시는길</a></li>
     </ul>
@@ -2034,6 +2187,50 @@ footer .footer-phone:hover { color: #F2B5C0; }
   </div>
 </section>
 
+<!-- ===== EVENTS SECTION ===== -->
+<section class="events-section" id="events">
+  <div class="section-header">
+    <span class="label">Events</span>
+    <h2>교회 <span class="accent">행사</span></h2>
+    <p>큰빛교회와 함께하는 특별한 시간</p>
+  </div>
+  <div class="events-inner">
+    <div class="event-card">
+      <div class="event-banner">
+        <img src="blessing-day.jpg" alt="2026 큰빛교회 블레싱데이">
+      </div>
+      <div class="event-info">
+        <span class="event-badge">INVITATION</span>
+        <div class="event-title-en">Blessing Day</div>
+        <div class="event-title-ko">블레싱데이</div>
+        <p class="event-subtitle">
+          하나님의 축복을 세상에 전하는<br>
+          <strong style="color:#C8566E;">2026 큰빛교회 블레싱데이</strong>
+        </p>
+        <div class="event-date-row">
+          <div class="event-date-big">
+            <span class="dm">MAY</span>
+            5/31
+          </div>
+          <div class="event-times">
+            <strong>주일</strong><br>
+            오전 11:00 / 오후 1:30
+          </div>
+        </div>
+        <div class="event-audience">
+          <span>💝 나의가족</span>
+          <span>🤝 나의친구</span>
+          <span>🏡 나의이웃</span>
+        </div>
+        <button class="event-share-btn" onclick="shareEvent()">
+          <span class="share-icon">💬</span>
+          초대장 공유하기
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== BROADCAST SECTION ===== -->
 <section class="broadcast-section" id="broadcast">
   <div class="section-header">
@@ -2143,6 +2340,33 @@ document.addEventListener('DOMContentLoaded', function () {
     );
   });
 });
+
+/* ===== EVENT SHARE (Native Share / Kakao) ===== */
+function shareEvent() {
+  var shareData = {
+    title: '2026 큰빛교회 블레싱데이',
+    text: '💐 하나님의 축복을 세상에 전하는 블레싱데이!\n' +
+          '📅 2026년 5월 31일 주일\n' +
+          '⏰ 오전 11:00 / 오후 1:30\n' +
+          '👨‍👩‍👧 나의가족 · 나의친구 · 나의이웃과 함께해요\n\n' +
+          '큰빛교회에서 여러분을 초대합니다!',
+    url: 'https://glc150606.github.io/glc/#events'
+  };
+  if (navigator.share) {
+    navigator.share(shareData).catch(function (err) {
+      console.log('share canceled', err);
+    });
+  } else {
+    var fallback = shareData.text + '\n\n' + shareData.url;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(fallback).then(function () {
+        alert('📋 초대장 내용이 복사되었어요!\n카카오톡, 문자 등 원하는 곳에 붙여넣기 해주세요.');
+      });
+    } else {
+      prompt('아래 내용을 복사해서 공유해주세요:', fallback);
+    }
+  }
+}
 
 /* ===== LIGHTBOX ===== */
 function openLightbox(src) {
