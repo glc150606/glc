@@ -10,7 +10,7 @@
 <style>
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body {
   font-family: 'Noto Sans KR', sans-serif;
   color: #333;
@@ -285,7 +285,6 @@ header.scrolled {
 /* ===== HOT POINT SECTION ===== */
 .hotpoint-section {
   background: var(--white);
-  scroll-margin-top: 80px;
   padding-bottom: 0;
 }
 .section-header {
@@ -462,7 +461,6 @@ header.scrolled {
 .worship-section {
   background: var(--white);
   padding-bottom: 80px;
-  scroll-margin-top: 80px;
 }
 .worship-wrap {
   max-width: 900px;
@@ -531,7 +529,6 @@ header.scrolled {
 /* ===== PASTOR SECTION ===== */
 .pastor-section {
   background: var(--white);
-  scroll-margin-top: 80px;
   padding: 80px 40px 80px;
 }
 .pastor-section .section-header {
@@ -664,7 +661,6 @@ header.scrolled {
 .vision-section {
   background: var(--bg);
   padding: 80px 40px;
-  scroll-margin-top: 80px;
 }
 .vision-declaration {
   max-width: 1000px;
@@ -786,7 +782,6 @@ header.scrolled {
 .denom-section {
   background: var(--white);
   padding: 80px 40px;
-  scroll-margin-top: 80px;
 }
 .denom-inner {
   max-width: 1100px;
@@ -887,7 +882,6 @@ header.scrolled {
 .mission-section {
   background: var(--bg);
   padding: 80px 40px;
-  scroll-margin-top: 80px;
 }
 .mission-grid {
   max-width: 1100px;
@@ -1070,7 +1064,6 @@ header.scrolled {
 .broadcast-section {
   background: linear-gradient(135deg, #FFFFFF 0%, #FCEEF1 100%);
   padding: 80px 40px;
-  scroll-margin-top: 80px;
   color: #3E3E3E;
 }
 .broadcast-section .section-header .label { color: #C8566E; }
@@ -1172,7 +1165,6 @@ header.scrolled {
 .album-section {
   background: var(--bg);
   padding-bottom: 70px;
-  scroll-margin-top: 80px;
 }
 .album-grid {
   display: grid;
@@ -1242,7 +1234,6 @@ header.scrolled {
 /* ===== LOCATION SECTION ===== */
 .location-section {
   background: #3E3E3E;
-  scroll-margin-top: 80px;
   padding: 70px 40px;
 }
 .location-section .section-header {
@@ -1492,6 +1483,9 @@ footer .footer-phone:hover { color: #F2B5C0; }
 }
 
 @media (max-width: 768px) {
+  /* Scroll offset matches mobile header height */
+  html { scroll-padding-top: 64px; }
+
   /* Top bar */
   .top-bar { padding: 0 16px; font-size: 12px; gap: 16px; }
 
@@ -1593,7 +1587,6 @@ footer .footer-phone:hover { color: #F2B5C0; }
 .events-section {
   padding: 100px 40px;
   background: linear-gradient(180deg, #FFF 0%, #FCEEF1 100%);
-  scroll-margin-top: 80px;
 }
 .events-section .section-header .label { color: #C8566E; }
 .events-section .section-header h2 { color: #3E3E3E; }
