@@ -35,8 +35,8 @@
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-/* Per-section scroll offset overrides (fit card + header in one mobile viewport) */
-#events { scroll-margin-top: -20px; }
+/* Events anchor: small extra breathing room above card */
+#events { scroll-margin-top: 12px; }
 body {
   font-family: 'Noto Sans KR', sans-serif;
   color: #333;
@@ -1511,8 +1511,8 @@ footer .footer-phone:hover { color: #F2B5C0; }
 @media (max-width: 768px) {
   /* Scroll offset matches mobile header height */
   html { scroll-padding-top: 64px; }
-  /* More aggressive offset on mobile so 교회행사 + 카드가 한 화면에 들어옴 */
-  #events { scroll-margin-top: -60px; }
+  /* Events anchor is on card itself (skip section header) */
+  #events { scroll-margin-top: 8px; }
 
   /* Top bar */
   .top-bar { padding: 0 16px; font-size: 12px; gap: 16px; }
@@ -2535,14 +2535,14 @@ footer .footer-phone:hover { color: #F2B5C0; }
 </section>
 
 <!-- ===== EVENTS SECTION ===== -->
-<section class="events-section" id="events">
+<section class="events-section">
   <div class="section-header">
     <span class="label">Events</span>
     <h2>교회 <span class="accent">행사</span></h2>
     <p>큰빛교회와 함께하는 특별한 시간</p>
   </div>
   <div class="events-inner">
-    <div class="event-card">
+    <div class="event-card" id="events">
       <!-- Designed Blessing Day banner (pure HTML/CSS, no image) -->
       <div class="blessing-banner">
         <!-- Decorative flowers -->
