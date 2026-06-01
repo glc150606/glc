@@ -6,25 +6,23 @@
 <title>큰빛교회 - 쉬지않고 기도하는 교회</title>
 
 <!-- ===== SEO / Open Graph (카카오톡·페이스북·라인 공유 미리보기) ===== -->
-<meta name="description" content="2026 큰빛교회 블레싱데이 5/31(주일) 오전 11:00, 오후 1:30 | 초대가수 바이브투(VIBE2) | 나의 가족·친구·이웃과 함께하는 축복의 시간">
+<meta name="description" content="2026 큰빛교회 여름성경학교 7/25(토)~26(일) | 영아부·유치부·초등부 | 하나님의 사랑 안에서 함께 자라나는 신나는 여름, 우리 아이들을 초대합니다">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="큰빛교회">
-<meta property="og:title" content="2026 큰빛교회 블레싱데이 · 5/31 초청예배">
-<meta property="og:description" content="🎤 초대가수 바이브투(VIBE2)｜5/31(주일) 오전 11:00, 오후 1:30｜나의 가족·친구·이웃을 초대하세요. 하나님의 축복을 함께 나누는 시간!">
-<meta property="og:image" content="https://glc150606.github.io/glc/og-blessing-day.jpg?v=2">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="2026 큰빛교회 블레싱데이 초청장">
+<meta property="og:title" content="2026 큰빛교회 여름성경학교 · 7/25~26">
+<meta property="og:description" content="🌞 영아부·유치부·초등부｜7/25(토)~26(일)｜큰빛교회 본당. 우리 자녀와 이웃 아이들을 초대하세요. 하나님의 사랑 안에서 함께 자라나는 여름!">
+<meta property="og:image" content="https://glc150606.github.io/glc/church-building.jpg">
+<meta property="og:image:alt" content="2026 큰빛교회 여름성경학교">
 <meta property="og:url" content="https://glc150606.github.io/glc/">
 <meta property="og:locale" content="ko_KR">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="2026 큰빛교회 블레싱데이 · 5/31 초청예배">
-<meta name="twitter:description" content="🎤 초대가수 바이브투(VIBE2)｜5/31(주일) 오전 11:00, 오후 1:30｜나의 가족·친구·이웃을 초대하세요.">
-<meta name="twitter:image" content="https://glc150606.github.io/glc/og-blessing-day.jpg?v=2">
+<meta name="twitter:title" content="2026 큰빛교회 여름성경학교 · 7/25~26">
+<meta name="twitter:description" content="🌞 영아부·유치부·초등부｜7/25(토)~26(일)｜우리 자녀와 이웃 아이들을 초대하세요.">
+<meta name="twitter:image" content="https://glc150606.github.io/glc/church-building.jpg">
 
 <link rel="icon" type="image/png" href="logo.png">
 
@@ -1632,370 +1630,215 @@ footer .footer-phone:hover { color: #F2B5C0; }
   border: 1px solid rgba(200, 86, 110, 0.08);
 }
 
-/* ===== BLESSING DAY BANNER (CSS Art) ===== */
-.blessing-banner {
+/* ===== SUMMER BIBLE SCHOOL BANNER (CSS Art) ===== */
+.vbs-banner {
   position: relative;
-  aspect-ratio: 1.4 / 1;
-  background: linear-gradient(135deg, #FDF4F3 0%, #FBEDEA 50%, #FDF1EC 100%);
+  padding: 52px 40px 74px;
+  background: linear-gradient(165deg, #8ED6F0 0%, #BCE6F2 30%, #FFEAA8 64%, #FFC79E 100%);
   overflow: hidden;
+  text-align: center;
   font-family: 'Noto Sans KR', sans-serif;
 }
-/* Decorative flower clusters */
-.bb-flower {
+/* Sun glow */
+.vbs-sun {
   position: absolute;
-  font-size: 72px;
-  line-height: 1;
-  user-select: none;
-  filter: drop-shadow(0 4px 10px rgba(200,86,110,0.15));
-}
-.bb-flower.tl {
-  top: -12px;
-  left: -10px;
-  transform: rotate(-18deg);
-}
-.bb-flower.tl span:nth-child(1) { font-size: 64px; }
-.bb-flower.tl span:nth-child(2) { font-size: 80px; margin-left: -14px; }
-.bb-flower.tl span:nth-child(3) { font-size: 56px; margin-left: -10px; }
-.bb-flower.br {
-  bottom: -18px;
-  right: -10px;
-  transform: rotate(165deg);
-}
-.bb-flower.br span:nth-child(1) { font-size: 60px; }
-.bb-flower.br span:nth-child(2) { font-size: 82px; margin-left: -14px; }
-.bb-flower.br span:nth-child(3) { font-size: 58px; margin-left: -10px; }
-/* Soft bokeh dots */
-.bb-bokeh {
-  position: absolute;
+  top: -46px;
+  left: -34px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, #FFF6CE 0%, #FFE596 42%, rgba(255,229,150,0) 72%);
   pointer-events: none;
 }
-.bb-bokeh.b1 { width: 110px; height: 110px; top: 28%; left: 38%; }
-.bb-bokeh.b2 { width: 70px; height: 70px; top: 58%; left: 62%; }
-.bb-bokeh.b3 { width: 50px; height: 50px; top: 18%; left: 68%; }
+/* Decorative summer icons */
+.vbs-deco {
+  position: absolute;
+  line-height: 1;
+  user-select: none;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.10));
+}
+.vbs-deco.d1 { top: 16px;  left: 26px;   font-size: 40px; }
+.vbs-deco.d2 { top: 96px;  left: -4px;   font-size: 52px; transform: rotate(-8deg); }
+.vbs-deco.d3 { bottom: 66px; left: 28px;  font-size: 42px; }
+.vbs-deco.d4 { top: 22px;  right: 150px;  font-size: 34px; transform: rotate(10deg); }
+.vbs-deco.d5 { bottom: 70px; right: 34px;  font-size: 36px; }
+.vbs-deco.d6 { bottom: 60px; right: 110px; font-size: 40px; }
 
-/* Invitation ribbon (top-right) */
-.bb-invitation {
+/* Date ribbon (top-right) */
+.vbs-ribbon {
   position: absolute;
   top: 0;
   right: 40px;
-  background: linear-gradient(180deg, #8C2B2E 0%, #A83535 100%);
+  background: linear-gradient(180deg, #E07A8F 0%, #C8566E 58%, #A83C56 100%);
   color: #fff;
-  padding: 18px 20px 20px;
-  border-radius: 0 0 14px 14px;
+  padding: 16px 20px 18px;
+  border-radius: 0 0 16px 16px;
   text-align: center;
-  min-width: 120px;
-  box-shadow: 0 8px 20px rgba(140,43,46,0.35);
-  z-index: 4;
+  min-width: 124px;
+  box-shadow: 0 10px 22px rgba(168,60,86,0.30);
+  z-index: 5;
 }
-.bb-invitation::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-top: 14px solid #A83535;
-}
-.bb-inv-label {
-  font-size: 10px;
-  letter-spacing: 3px;
-  font-weight: 700;
-  opacity: 0.85;
-  margin-bottom: 8px;
+.vbs-rb-label {
   font-family: 'Georgia', serif;
   font-style: italic;
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  opacity: 0.92;
+  margin-bottom: 6px;
 }
-.bb-inv-date {
-  font-size: 46px;
+.vbs-rb-date {
+  font-family: 'Georgia', serif;
+  font-size: 38px;
   font-weight: 900;
   line-height: 1;
-  font-family: 'Georgia', serif;
-  position: relative;
-  display: inline-block;
-  padding: 2px 0;
+  letter-spacing: -1px;
 }
-.bb-inv-date .slash {
-  display: inline-block;
-  transform: rotate(12deg);
-  margin: 0 -2px;
-  opacity: 0.7;
-}
-.bb-inv-times {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center;
-  margin-top: 10px;
+.vbs-rb-date .dot { margin: 0 1px; opacity: 0.85; }
+.vbs-rb-date .tilde { margin: 0 3px; font-weight: 400; opacity: 0.8; }
+.vbs-rb-day {
+  margin-top: 8px;
   font-size: 12px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-.bb-sunday-pill {
-  display: inline-block;
-  writing-mode: vertical-rl;
-  background: rgba(0,0,0,0.25);
-  color: #fff;
-  padding: 8px 3px;
-  border-radius: 6px;
-  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 2px;
-  font-weight: 700;
+  background: rgba(255,255,255,0.22);
+  border-radius: 20px;
+  padding: 3px 0;
 }
-.bb-times-stack { text-align: left; line-height: 1.5; }
-.bb-times-stack strong { color: #FFE08A; font-weight: 800; }
 
-/* Center composition */
-.bb-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -58%);
-  text-align: center;
-  z-index: 3;
-  width: 100%;
-  padding: 0 40px;
-}
-.bb-title-blessing {
-  font-family: 'Brush Script MT', 'Dancing Script', cursive;
-  font-size: clamp(60px, 12vw, 150px);
-  color: #8C2B2E;
-  font-weight: 400;
-  line-height: 0.9;
-  letter-spacing: -2px;
-  display: inline-block;
-  transform: rotate(-2deg);
-  text-shadow: 2px 3px 0 rgba(255,255,255,0.5);
-}
-.bb-title-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  margin-top: -6px;
-}
-.bb-bullet-circle {
+/* Center title */
+.vbs-center {
   position: relative;
-  width: 72px;
-  height: 72px;
-  flex-shrink: 0;
+  z-index: 4;
+  max-width: 560px;
+  margin: 0 auto;
 }
-.bb-bullet-circle::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.6);
-  border-radius: 50%;
-  box-shadow: 0 4px 14px rgba(200,86,110,0.1);
-}
-.bb-bullet-dot {
-  position: absolute;
-  top: -6px;
-  left: 4px;
-  width: 22px;
-  height: 22px;
-  background: #C8566E;
-  border-radius: 50%;
-  z-index: 2;
-}
-.bb-bullet-list {
-  position: absolute;
-  top: 8px;
-  left: 28px;
-  text-align: left;
-  font-size: 13px;
+.vbs-year {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 26px;
   font-weight: 700;
-  color: #333;
-  line-height: 1.45;
-  white-space: nowrap;
-  z-index: 3;
+  color: #C8566E;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+  text-shadow: 0 2px 6px rgba(255,255,255,0.55);
 }
-.bb-title-day {
-  font-family: 'Arial Black', 'Impact', sans-serif;
-  font-size: clamp(50px, 11vw, 130px);
-  color: #2C3E7B;
+.vbs-title {
+  font-size: clamp(40px, 8.2vw, 76px);
   font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -3px;
+  color: #A83C56;
+  letter-spacing: -2px;
+  line-height: 1.02;
+  margin: 0;
+  text-shadow: 0 3px 0 rgba(255,255,255,0.55), 0 8px 22px rgba(168,60,86,0.18);
+}
+.vbs-en {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  letter-spacing: 4px;
+  font-size: clamp(12px, 1.8vw, 16px);
+  font-weight: 700;
+  color: #4F86A6;
+  margin-top: 8px;
+}
+.vbs-depts-pills {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+.vbs-depts-pills span {
+  background: rgba(255,255,255,0.88);
+  color: #C8566E;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 7px 18px;
+  border-radius: 22px;
+  box-shadow: 0 4px 12px rgba(168,60,86,0.14);
 }
 
-/* Footer tagline */
-.bb-footer {
+/* White foam waves at bottom */
+.vbs-waves {
   position: absolute;
-  bottom: 28px;
   left: 0;
   right: 0;
-  text-align: center;
+  bottom: -1px;
+  line-height: 0;
   z-index: 3;
-  padding: 0 20px;
 }
-.bb-foot-top {
-  color: #2C3E7B;
-  font-size: clamp(12px, 1.6vw, 16px);
-  font-weight: 600;
-  margin-bottom: 8px;
-  letter-spacing: 0.5px;
-}
-.bb-foot-top em {
-  color: #C8566E;
-  font-style: normal;
-  font-weight: 800;
-}
-.bb-foot-bot {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  color: #2C3E7B;
-  font-size: clamp(16px, 2.4vw, 24px);
-  letter-spacing: -0.5px;
-}
-.bb-year {
-  font-family: 'Georgia', serif;
-  font-style: italic;
-  font-weight: 400;
-  color: #2C3E7B;
-}
-.bb-church-pill {
-  background: #2C3E7B;
-  color: #fff;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: clamp(13px, 1.9vw, 18px);
-  font-weight: 800;
-}
-
-/* ===== GUEST ARTIST card ===== */
-.event-guest-card {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 0;
-  background: linear-gradient(135deg, #2C3E7B 0%, #3A4FA0 100%);
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-}
-.guest-photo {
-  position: relative;
-  overflow: hidden;
-  background: #f5e8ea;
-  cursor: pointer;
-}
-.guest-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.vbs-waves svg {
   display: block;
-  transition: transform 0.4s ease;
+  width: 100%;
+  height: 54px;
 }
-.guest-photo:hover img {
-  transform: scale(1.03);
-}
-.guest-photo-zoom {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.guest-photo:hover .guest-photo-zoom { opacity: 1; }
 
-.guest-info {
-  padding: 28px 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+/* ===== DEPARTMENT CARDS ===== */
+.vbs-depts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 30px 36px 6px;
+  background: #fff;
 }
-.guest-info::before {
-  content: '♪';
-  position: absolute;
-  font-size: 140px;
-  opacity: 0.08;
-  right: 20px;
-  top: -30px;
-  font-family: 'Georgia', serif;
-  line-height: 1;
-  pointer-events: none;
-}
-.guest-info::after {
-  content: '♫';
-  position: absolute;
-  font-size: 90px;
-  opacity: 0.08;
-  right: 160px;
-  bottom: -10px;
-  font-family: 'Georgia', serif;
-  line-height: 1;
-  pointer-events: none;
-}
-.guest-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255,255,255,0.15);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #FFE08A;
-  align-self: flex-start;
-  margin-bottom: 12px;
-  z-index: 2;
-}
-.guest-name {
-  font-size: 26px;
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
-  z-index: 2;
-}
-.guest-name .en {
-  font-family: 'Georgia', serif;
-  font-style: italic;
-  color: #FFE08A;
-  margin-left: 10px;
-  font-weight: 700;
-  font-size: 20px;
-}
-.guest-sub {
-  font-size: 13px;
-  opacity: 0.85;
-  margin-top: 8px;
-  letter-spacing: 0.5px;
-  line-height: 1.5;
-  z-index: 2;
-}
-.guest-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 14px;
-  z-index: 2;
-}
-.guest-tags span {
-  background: rgba(255,255,255,0.12);
-  padding: 4px 12px;
+.vbs-dept {
   border-radius: 16px;
-  font-size: 11px;
+  padding: 24px 14px 22px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vbs-dept:hover { transform: translateY(-4px); }
+.vbs-dept.dept-baby   { background: #FFEFF3; box-shadow: 0 8px 20px rgba(224,122,143,0.16); }
+.vbs-dept.dept-kinder { background: #FFF6DC; box-shadow: 0 8px 20px rgba(232,162,61,0.16); }
+.vbs-dept.dept-elem   { background: #E9F5FC; box-shadow: 0 8px 20px rgba(61,155,208,0.16); }
+.vbs-dept-ico {
+  font-size: 46px;
+  line-height: 1;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+}
+.vbs-dept-name {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.vbs-dept.dept-baby   .vbs-dept-name { color: #C8566E; }
+.vbs-dept.dept-kinder .vbs-dept-name { color: #CC8A2A; }
+.vbs-dept.dept-elem   .vbs-dept-name { color: #2E8BC0; }
+.vbs-dept-sub {
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* ===== INFO ROW (date / place / contact) ===== */
+.vbs-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 30px;
+  padding: 24px 36px 6px;
+  background: #fff;
+}
+.vbs-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  color: #555;
+  font-weight: 500;
+}
+.vbs-info-ico { font-size: 18px; }
+.vbs-info-k {
+  display: inline-block;
+  background: #FCEEF1;
+  color: #C8566E;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 14px;
+  margin-right: 7px;
 }
 
 /* ===== CTA BAR below banner ===== */
@@ -2047,33 +1890,31 @@ footer .footer-phone:hover { color: #F2B5C0; }
   .events-section .section-header h2 { font-size: 26px; margin-bottom: 6px; }
   .events-section .section-header p { font-size: 13px; }
 
-  .blessing-banner { aspect-ratio: 1.35 / 1; }
-  .bb-flower.tl, .bb-flower.br { font-size: 44px; }
-  .bb-invitation { right: 12px; padding: 10px 12px 12px; min-width: 80px; }
-  .bb-invitation::after { border-left-width: 40px; border-right-width: 40px; border-top-width: 10px; bottom: -8px; }
-  .bb-inv-label { font-size: 8px; letter-spacing: 2px; margin-bottom: 4px; }
-  .bb-inv-date { font-size: 28px; }
-  .bb-inv-times { font-size: 10px; margin-top: 6px; gap: 4px; }
-  .bb-sunday-pill { padding: 6px 2px; font-size: 9px; letter-spacing: 1px; }
-  .bb-center { transform: translate(-50%, -62%); padding: 0 16px; }
-  .bb-title-row { gap: 10px; margin-top: -4px; }
-  .bb-bullet-circle { width: 52px; height: 52px; }
-  .bb-bullet-dot { width: 16px; height: 16px; top: -4px; }
-  .bb-bullet-list { font-size: 10px; left: 18px; top: 5px; line-height: 1.35; }
-  .bb-footer { bottom: 14px; }
-  .bb-foot-top { font-size: 11px; margin-bottom: 4px; }
-  .bb-foot-bot { font-size: 15px; gap: 6px; }
-  .bb-church-pill { font-size: 12px; padding: 3px 8px; }
+  .vbs-banner { padding: 34px 16px 50px; }
+  .vbs-sun { width: 130px; height: 130px; top: -30px; left: -24px; }
+  .vbs-deco { display: none; }
+  .vbs-deco.d2, .vbs-deco.d5 { display: block; }
+  .vbs-deco.d2 { font-size: 34px; top: 58px; left: -4px; }
+  .vbs-deco.d5 { font-size: 26px; bottom: 54px; right: 16px; }
+  .vbs-ribbon { right: 14px; padding: 10px 12px 12px; min-width: 84px; }
+  .vbs-rb-label { font-size: 9px; letter-spacing: 2px; margin-bottom: 4px; }
+  .vbs-rb-date { font-size: 26px; }
+  .vbs-rb-day { font-size: 10px; letter-spacing: 1px; margin-top: 5px; }
+  .vbs-year { font-size: 20px; }
+  .vbs-en { letter-spacing: 3px; margin-top: 6px; }
+  .vbs-depts-pills { gap: 6px; margin-top: 14px; }
+  .vbs-depts-pills span { font-size: 12px; padding: 5px 13px; }
+  .vbs-waves svg { height: 34px; }
 
-  .event-guest-card { grid-template-columns: 120px 1fr; }
-  .guest-info { padding: 16px 18px; }
-  .guest-info::before, .guest-info::after { display: none; }
-  .guest-label { padding: 3px 10px; font-size: 10px; letter-spacing: 1.5px; gap: 4px; margin-bottom: 6px; }
-  .guest-name { font-size: 17px; }
-  .guest-name .en { font-size: 13px; margin-left: 6px; display: block; margin-top: 2px; }
-  .guest-sub { font-size: 11px; margin-top: 4px; line-height: 1.4; }
-  .guest-tags { margin-top: 8px; }
-  .guest-tags span { font-size: 10px; padding: 3px 9px; }
+  .vbs-depts { gap: 9px; padding: 22px 14px 4px; }
+  .vbs-dept { padding: 16px 6px 15px; border-radius: 13px; }
+  .vbs-dept-ico { font-size: 34px; margin-bottom: 7px; }
+  .vbs-dept-name { font-size: 14px; }
+  .vbs-dept-sub { font-size: 11px; }
+  .vbs-info { gap: 8px 16px; padding: 16px 16px 2px; }
+  .vbs-info-item { font-size: 12.5px; gap: 7px; }
+  .vbs-info-ico { font-size: 15px; }
+  .vbs-info-k { font-size: 10.5px; padding: 2px 8px; margin-right: 5px; }
 
   .event-cta-bar { flex-direction: column; text-align: center; padding: 16px 20px 20px; gap: 12px; }
   .event-cta-text { font-size: 12px; line-height: 1.5; }
@@ -2081,11 +1922,14 @@ footer .footer-phone:hover { color: #F2B5C0; }
   .event-share-btn .share-icon { font-size: 16px; }
 }
 @media (max-width: 480px) {
-  .blessing-banner { aspect-ratio: 1.3 / 1; }
-  .bb-flower.tl, .bb-flower.br { font-size: 38px; }
-  .event-guest-card { grid-template-columns: 100px 1fr; }
-  .guest-info { padding: 14px 14px; }
-  .guest-name { font-size: 16px; }
+  .vbs-banner { padding-top: 90px; }
+  .vbs-title { font-size: 36px; letter-spacing: -1px; }
+  .vbs-ribbon { min-width: 76px; padding: 9px 11px 11px; }
+  .vbs-rb-label { letter-spacing: 3px; }
+  .vbs-rb-date { font-size: 23px; }
+  .vbs-deco.d2 { display: none; }
+  .vbs-dept-sub { font-size: 10px; }
+  .vbs-info-item { font-size: 12px; }
 }
 </style>
 </head>
@@ -2543,79 +2387,85 @@ footer .footer-phone:hover { color: #F2B5C0; }
   </div>
   <div class="events-inner">
     <div class="event-card" id="events">
-      <!-- Designed Blessing Day banner (pure HTML/CSS, no image) -->
-      <div class="blessing-banner">
-        <!-- Decorative flowers -->
-        <div class="bb-flower tl"><span>🌷</span><span>🌼</span><span>🌸</span></div>
-        <div class="bb-flower br"><span>🌷</span><span>🌼</span><span>🌸</span></div>
-        <!-- Soft bokeh -->
-        <div class="bb-bokeh b1"></div>
-        <div class="bb-bokeh b2"></div>
-        <div class="bb-bokeh b3"></div>
+      <!-- Summer Bible School banner (pure HTML/CSS, no image) -->
+      <div class="vbs-banner">
+        <!-- Sun glow -->
+        <div class="vbs-sun"></div>
+        <!-- Decorative summer icons -->
+        <span class="vbs-deco d1">⛅</span>
+        <span class="vbs-deco d2">🌈</span>
+        <span class="vbs-deco d3">🌴</span>
+        <span class="vbs-deco d4">🍉</span>
+        <span class="vbs-deco d5">🐚</span>
+        <span class="vbs-deco d6">⛱️</span>
 
-        <!-- Top-right invitation ribbon -->
-        <div class="bb-invitation">
-          <div class="bb-inv-label">INVITATION</div>
-          <div class="bb-inv-date">5<span class="slash">/</span>31</div>
-          <div class="bb-inv-times">
-            <span class="bb-sunday-pill">주일</span>
-            <div class="bb-times-stack">
-              오전 <strong>11:00</strong><br>
-              오후 <strong>1:30</strong>
-            </div>
-          </div>
+        <!-- Top-right date ribbon -->
+        <div class="vbs-ribbon">
+          <div class="vbs-rb-label">SUMMER</div>
+          <div class="vbs-rb-date">7<span class="dot">.</span>25<span class="tilde">~</span>26</div>
+          <div class="vbs-rb-day">토 · 일</div>
         </div>
 
         <!-- Center title -->
-        <div class="bb-center">
-          <div class="bb-title-blessing">Blessing</div>
-          <div class="bb-title-row">
-            <div class="bb-bullet-circle">
-              <div class="bb-bullet-dot"></div>
-              <div class="bb-bullet-list">
-                나의가족<br>
-                나의친구<br>
-                나의이웃
-              </div>
-            </div>
-            <div class="bb-title-day">DAY</div>
+        <div class="vbs-center">
+          <div class="vbs-year">2026</div>
+          <h3 class="vbs-title">여름성경학교</h3>
+          <div class="vbs-en">SUMMER BIBLE SCHOOL</div>
+          <div class="vbs-depts-pills">
+            <span>영아부</span>
+            <span>유치부</span>
+            <span>초등부</span>
           </div>
         </div>
 
-        <!-- Bottom tagline -->
-        <div class="bb-footer">
-          <div class="bb-foot-top">하나님의 <em>축복</em>을 세상에 전하는</div>
-          <div class="bb-foot-bot">
-            <span class="bb-year">2026</span>
-            <span class="bb-church-pill">큰빛교회</span>
-            블레싱데이
-          </div>
+        <!-- White foam waves -->
+        <div class="vbs-waves">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,64 C240,112 480,16 720,40 C960,64 1200,120 1440,72 L1440,120 L0,120 Z" fill="#ffffff"></path>
+          </svg>
         </div>
       </div>
 
-      <!-- Special Guest Artist Card -->
-      <div class="event-guest-card">
-        <div class="guest-photo" onclick="openLightbox('vibe2.jpg')">
-          <img src="vibe2.jpg" alt="초대가수 바이브투 VIBE2">
-          <div class="guest-photo-zoom">🔍</div>
+      <!-- Department cards -->
+      <div class="vbs-depts">
+        <div class="vbs-dept dept-baby">
+          <div class="vbs-dept-ico">🍼</div>
+          <div class="vbs-dept-name">영아부</div>
+          <div class="vbs-dept-sub">영아 ~ 4세</div>
         </div>
-        <div class="guest-info">
-          <span class="guest-label">🎤 SPECIAL GUEST</span>
-          <div class="guest-name">초대가수 바이브투 <span class="en">VIBE TWO</span></div>
-          <div class="guest-sub">감동적인 찬양과 함께하는<br>축복의 시간을 선물합니다</div>
-          <div class="guest-tags">
-            <span>#CCM</span>
-            <span>#듀오</span>
-            <span>#찬양</span>
-          </div>
+        <div class="vbs-dept dept-kinder">
+          <div class="vbs-dept-ico">🧸</div>
+          <div class="vbs-dept-name">유치부</div>
+          <div class="vbs-dept-sub">5 ~ 7세</div>
+        </div>
+        <div class="vbs-dept dept-elem">
+          <div class="vbs-dept-ico">🎒</div>
+          <div class="vbs-dept-name">초등부</div>
+          <div class="vbs-dept-sub">초등 1 ~ 6학년</div>
+        </div>
+      </div>
+
+      <!-- Info row -->
+      <div class="vbs-info">
+        <div class="vbs-info-item">
+          <span class="vbs-info-ico">📅</span>
+          <div><span class="vbs-info-k">일시</span>2026. 7. 25(토) ~ 26(일)</div>
+        </div>
+        <div class="vbs-info-item">
+          <span class="vbs-info-ico">📍</span>
+          <div><span class="vbs-info-k">장소</span>큰빛교회 본당</div>
+        </div>
+        <div class="vbs-info-item">
+          <span class="vbs-info-ico">📞</span>
+          <div><span class="vbs-info-k">문의</span>010-2587-5025</div>
         </div>
       </div>
 
       <!-- CTA bar -->
       <div class="event-cta-bar">
         <div class="event-cta-text">
-          <strong>나의 가족, 친구, 이웃</strong>을 초대하세요.<br>
-          하나님의 축복을 함께 나누는 특별한 예배에 여러분을 초대합니다.
+          <strong>우리 자녀와 이웃 아이들</strong>을 초대하세요.<br>
+          하나님의 사랑 안에서 함께 자라나는 신나는 여름이 기다립니다 🌞
         </div>
         <button class="event-share-btn" onclick="shareEvent()">
           <span class="share-icon">💬</span>
@@ -2739,13 +2589,13 @@ document.addEventListener('DOMContentLoaded', function () {
 /* ===== EVENT SHARE (Native Share / Kakao) ===== */
 function shareEvent() {
   var shareData = {
-    title: '2026 큰빛교회 블레싱데이',
-    text: '💐 하나님의 축복을 세상에 전하는 블레싱데이!\n' +
-          '📅 2026년 5월 31일 주일\n' +
-          '⏰ 오전 11:00 / 오후 1:30\n' +
-          '🎤 초대가수 바이브투(VIBE2)\n' +
-          '👨‍👩‍👧 나의가족 · 나의친구 · 나의이웃과 함께해요\n\n' +
-          '큰빛교회에서 여러분을 초대합니다!',
+    title: '2026 큰빛교회 여름성경학교',
+    text: '🌞 2026 큰빛교회 여름성경학교에 우리 아이들을 초대합니다!\n' +
+          '📅 2026년 7월 25일(토) ~ 26일(일)\n' +
+          '👶 영아부 · 유치부 · 초등부\n' +
+          '📍 큰빛교회 본당 (부산 강서구 명지국제11로 66, 5층)\n' +
+          '📞 문의 010-2587-5025\n\n' +
+          '하나님의 사랑 안에서 함께 자라나는 신나는 여름이 기다려요!',
     url: 'https://glc150606.github.io/glc/#events'
   };
   if (navigator.share) {
