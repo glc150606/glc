@@ -172,6 +172,7 @@ header.scrolled {
   font-weight: 600;
   color: #333;
   position: relative;
+  white-space: nowrap;
   transition: color var(--transition);
 }
 .main-nav ul li a::after {
@@ -1509,6 +1510,29 @@ footer .footer-phone:hover { color: #F2B5C0; }
   }
 }
 
+/* 가로 메뉴가 안전하게 들어가지 않는 폭(<1200px)에서는 햄버거 메뉴 사용
+   — 769~1150px대에서 메뉴 글자가 헤더 밖으로 흩어지던 버그 수정 */
+@media (max-width: 1199px) {
+  .main-nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    display: none;
+  }
+  .main-nav.open { display: block; }
+  .main-nav ul { flex-direction: column; align-items: stretch; }
+  .main-nav ul li a {
+    line-height: 1;
+    padding: 16px 24px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .main-nav ul li a::after { display: none; }
+  .menu-toggle { display: flex; }
+}
+
 @media (max-width: 768px) {
   /* Scroll offset matches mobile header height */
   html { scroll-padding-top: 64px; }
@@ -1522,24 +1546,7 @@ footer .footer-phone:hover { color: #F2B5C0; }
   header { padding: 0 16px; height: 64px; }
   .logo-area img { height: 44px; }
   .logo-text .church-name { font-size: 20px; }
-  .main-nav {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    display: none;
-  }
-  .main-nav.open { display: block; }
-  .main-nav ul { flex-direction: column; }
-  .main-nav ul li a {
-    line-height: 1;
-    padding: 16px 24px;
-    border-bottom: 1px solid #f0f0f0;
-  }
-  .main-nav ul li a::after { display: none; }
-  .menu-toggle { display: flex; }
+  .main-nav { top: 64px; }
 
   /* Hero */
   .hero { height: 420px; }
@@ -2352,7 +2359,6 @@ footer .footer-phone:hover { color: #F2B5C0; }
         </tr>
       </tbody>
     </table>
-  </div>
   </div>
 </section>
 
